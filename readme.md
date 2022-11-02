@@ -73,7 +73,7 @@ Coloque o nome `lab-ecr`
 
 ![ECS_02](./assets/tela_02.png)
 
-Deixe as outras opções como padrão (nao modifica-las), e clique em *Criar repositório*
+Deixe as outras opções como padrão (não modifica-las), e clique em *Criar repositório*
 
 ![ECS_03](./assets/tela_03.png)
 
@@ -117,7 +117,7 @@ Após o upload da imagem docker vamos copiar a *URI da imagem* para usar ela na 
 
 Vamos realizar a criação de um grupo de segurança para os nossos containers.
 
-Para isso, vamos acessar *em outra aba* o sevico do Amazon EC2 (https://console.aws.amazon.com/ec2).
+Para isso, vamos acessar *em outra aba* o serviço do Amazon EC2 (https://console.aws.amazon.com/ec2).
 
 Vamos clicar em *Security Group*, e em seguida em *Criar grupo de segurança*.
 
@@ -165,7 +165,7 @@ Você vai ser redirecionado para o serviço do Amazon ECS e o cluster será prov
 
 ![ECS_14](./assets/tela_14.png)
 
-Quando o Cluster estiver provisionádo, veremos a mensagem *Criado com êxito*, e o mesmo estará disponível.
+Quando o Cluster estiver provisionado, veremos a mensagem *Criado com êxito*, e o mesmo estará disponível.
 
 ![ECS_15](./assets/tela_15.png)
 
@@ -200,7 +200,7 @@ Na etapa de configuração de ambiente da aplicação, colocamos:
 - Função da tarefa: `TeamRole`
 - Função de execução da tarefa: `TeamRole`
 
-Em seguida vamo Clicar em *Próximo*.
+Em seguida vamos Clicar em *Próximo*.
 
 ![ECS_20](./assets/tela_20.png)
 
@@ -218,7 +218,7 @@ Assim que concluir podemos ver.
 
 ## Passo 8: Rodando a Task de forma manual e validando o acesso
 
-No painel do serviço do ECS, vamos abrir o *Cluster*, selecionar a aba *Taferas* e clicar em *Executar nova tarefa*.
+No painel do serviço do ECS, vamos abrir o *Cluster*, selecionar a aba *Tarefas* e clicar em *Executar nova tarefa*.
 
 ![ECS_23](./assets/tela_23.png)
 
@@ -230,6 +230,7 @@ Na configuração de implantação vamos colocar:
 - Tipo: *Tarefa*
 - Familia: *task-lab-ecs* na versão mais recente
 - Numero de tarefas, vamos colocar *1*.
+- Vamos deixar a opção `Especifique a revisão manualmente` *DESMARCADA*.
 
 ![ECS_25](./assets/tela_25.png)
 
@@ -266,7 +267,7 @@ Realizando o teste no navegador vamos ter acesso a aplicação dentro do contain
 
 ![WEB_01](./assets/tela_web.png)
 
-## Passo 9: Rodando task de forma automatica criando um serviço
+## Passo 9: Rodando task de forma automática criando um serviço
 
 Voltando a tela iniciar do nosso *Cluster de ECS*.
 Vamos clicar em *Serviços* e em seguida em *Implantar*
@@ -277,15 +278,15 @@ Na tela de configuração do *Serviço* vamos selecionar:
 - Opções de computação: `Tipo de inicialização`.
 - Tipo de inicialização: `FARGATE`
 
-Em Configura'ão de impantação vamos configurar:
+Em Configura'ão de implantação vamos configurar:
 - Tipo: `Serviço`
 - Definição de tarefa:
     - DESMARQUE A OPÇÃO `Especifique a revisão manualmente`.
-    - Familia: `task-lab-ecs` (que é *task* que criamos).
+    - Família: `task-lab-ecs` (que é *task* que criamos).
     - Revisão: `LATEST` (última versão).
     - Nome do serviço: `service-lab-ecs`.
     - Tipo de serviço: `Réplica`.
-    - Taferas desejadas: `2`.
+    - Tarefas desejadas: `2`.
 
 Nas configurações de rede, vamos fazer as mesmas do `Passo 08`.
 
@@ -304,7 +305,7 @@ Clicando em *Task* já vemos elas sendo provisionadas.
 ![ECS_37](./assets/tela_37.png)
 
 E um pouco depois, com o status *Em execução*.
-E finalmente podemos repitir o teste que fizemos no final do `Passo 08`, onde:
+E finalmente podemos repetir o teste que fizemos no final do `Passo 08`, onde:
 - Clicamos na *Task*, copiamos o endereço de IP Externo, e testamos no navegador.
 
 ![ECS_38](./assets/tela_37.png).
