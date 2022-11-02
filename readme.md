@@ -23,7 +23,14 @@ Juntamente com o serviço do Amazon ECS, precisamos utilziar o Amazon ECR (Elast
 2) Um usuário com permissões suficientes para acessar os recursos necessários (ECS, ECR).
 3) Credenciais de acesso programático
 3) Docker instalado no dispositivo do aluno
+
+> **Importante:** Segue a documentação oficial para a instalação do Docker em ambiente Lunix, MacOS e Windows.
+https://docs.docker.com/get-docker/
+
 4) AWS-CLI instalado e configurado no dispositivo do aluno
+
+> **Importante:** Segue a documentação oficial da AWS para a instalação do AWS-CLI em ambiente Lunix, MacOS e Windows.
+Link https://docs.aws.amazon.com/pt_br/cli/latest/userguide/getting-started-install.html
 
 ## Passo 1: Configurar um Dockerfile
 
@@ -32,7 +39,7 @@ Vamos criar um docker file com o objetivo de:
 - Fazer o download de um arquivo .html no diretório padrão do Apache.
 - Iniciar o Apache quando o container for executado.
 
-Acesse o [Dockerfile](./scripts/Dockerfile) de exemplo.
+Acesse aqui o [Dockerfile](./scripts/Dockerfile) de exemplo.
 
 ## Passo 2: Fazer o build da imagem docker
 
@@ -90,7 +97,7 @@ Vamos ter duas formas de fazer o *push*:
 - Utilizando sistema operacional *Windows*.
 
 > **Importante:** É necessário ter configurado o AWS-CLI com suas credencias de acesso.
-Motivo: o pq ter o aws-cli instalado / apontar para doc de instalacao e configuracao para o laboratorio
+Segue link da documentação de configuração do AWS-CLI. (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
 
 `LINUX/MAC:`
 
@@ -118,8 +125,8 @@ Vamos clicar em *Security Group*, e em seguida em *Criar grupo de segurança*.
 
 
 Nas configurações do *Grupo de segurança* vamos colocar:
-- Nome: `sg_lab_ecs`
-- Descrição : `sg_lab_ecs`
+- Nome: `sg-lab-ecs`
+- Descrição : `sg-lab-ecs`
 - Regras de entrada:
     - Vamos *Adicionar Regra*:
         - Colocar o protocolo *HTTP* e liberar para *qualquer origem*.
