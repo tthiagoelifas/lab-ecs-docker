@@ -12,7 +12,7 @@ O Amazon ECS é baseado em Tarefas (`Tasks`) e Serviços (`Services`), onde:
 
 - `Services` são utilizados para definir como e quando a `Tasks` seram executada.
 
-Juntamente com o serviço do Amazon ECS, precisamos utilziar o Amazon ECR (Elastic Container Registry) para armazenar as imagens Docker que faremos o upload.
+Juntamente com o serviço do Amazon ECS, precisamos utilizar o Amazon ECR (Elastic Container Registry) para armazenar as imagens Docker que faremos o upload.
 
 
 ![ARQ](./assets/ARQ-LAB-ECS.png)
@@ -49,7 +49,7 @@ No diretório/pasta que estiver o Dockerfile, execute o comando abaixo para faze
 $ docker build -t lab-ecs:latest .
 ```
 
-Pra verificar a imagem criada execute:
+Pra verificar a imagem criada, execute:
 
 ```sh
 $ docker images
@@ -84,7 +84,7 @@ Vamos observar que o nosso repositório foi criado com sucesso.
 ## Passo 4: Fazendo upload da imagem docker para o Amazon ECR e copiando a URI
 
 
-Para realizar o upload da imagem docker no Amazon ECR vamos, clicar no nosso repositório:
+Para realizar o upload da imagem docker no Amazon ECR, vamos clicar no nosso repositório:
 
 ![ECS_05](./assets/tela_05.png)
 
@@ -193,7 +193,7 @@ Em seguida vamo Clicar em *Próximo*.
 
 ![ECS_19](./assets/tela_19.png)
 
-Na etapa de configuração de ambiente da aplicação, colocamos:
+Na etapa de configuração de ambiente da aplicação, colocaremos:
 - Ambiente: `AWS Fargate`
 - Sistema Operacional/Arquitetura: `Linux/X86_64`
 - CPU: `1 vCPU` , Memória: `2GB`
@@ -278,7 +278,7 @@ Na tela de configuração do *Serviço* vamos selecionar:
 - Opções de computação: `Tipo de inicialização`.
 - Tipo de inicialização: `FARGATE`
 
-Em Configura'ão de implantação vamos configurar:
+Em Configuração de implantação vamos configurar:
 - Tipo: `Serviço`
 - Definição de tarefa:
     - DESMARQUE A OPÇÃO `Especifique a revisão manualmente`.
@@ -308,9 +308,10 @@ E um pouco depois, com o status *Em execução*.
 E finalmente podemos repetir o teste que fizemos no final do `Passo 08`, onde:
 - Clicamos na *Task*, copiamos o endereço de IP Externo, e testamos no navegador.
 
-![ECS_38](./assets/tela_37.png).
+![ECS_38](./assets/tela_37.png)
 
 Agora temos o mesmo ambiente do LAB de EC2, porem utilizando containers na AWS com o serviço do Amazon ECS.
+
 
 That's all folks!
 
