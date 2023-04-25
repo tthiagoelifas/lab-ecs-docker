@@ -24,12 +24,12 @@ Juntamente com o serviço do Amazon ECS, precisamos utilizar o Amazon ECR (Elast
 3) Credenciais de acesso programático
 3) Docker instalado no dispositivo do aluno
 
-> **Importante:** Segue a documentação oficial para a instalação do Docker em ambiente Lunix, MacOS e Windows.
+> **Importante:** Segue a documentação oficial para a instalação do Docker em ambiente Linux, MacOS e Windows.
 https://docs.docker.com/get-docker/
 
 4) AWS-CLI instalado e configurado no dispositivo do aluno
 
-> **Importante:** Segue a documentação oficial da AWS para a instalação do AWS-CLI em ambiente Lunix, MacOS e Windows.
+> **Importante:** Segue a documentação oficial da AWS para a instalação do AWS-CLI em ambiente Linux, MacOS e Windows.
 Link https://docs.aws.amazon.com/pt_br/cli/latest/userguide/getting-started-install.html
 
 ## Passo 1: Configurar um Dockerfile
@@ -125,8 +125,8 @@ Vamos clicar em *Security Group*, e em seguida em *Criar grupo de segurança*.
 
 
 Nas configurações do *Grupo de segurança* vamos colocar:
-- Nome: `sg-lab-ecs`
-- Descrição : `sg-lab-ecs`
+- Nome: `SG_LAB_ECS`
+- Descrição : `SG_LAB_ECS`
 - Regras de entrada:
     - Vamos *Adicionar Regra*:
         - Colocar o protocolo *HTTP* e liberar para *qualquer origem*.
@@ -136,12 +136,13 @@ Após as configurações, clicar em `Criar grupo de segurança`.
 Com isso o nosso *Grupo de segurança dos containers estão criados.
 
 ![ECS_32](./assets/tela_32.png)
+Clique em *Criar grupo de segurança*
 
 
 ## Passo 6: Criando o cluster de ECS
 
-Navegue até o serviço "ECR" ou acesse diretamente por esse link:
-https://console.aws.amazon.com/ecr.
+Navegue até o serviço "ECS" ou acesse diretamente por esse link:
+https://console.aws.amazon.com/ecs.
 
 
 Vamos clicar em *Criar Cluster*
