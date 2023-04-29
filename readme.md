@@ -156,7 +156,7 @@ Na criação do Cluster vamos preencher o nome: `LAB-ECS`:
 
 ![ECS_11](./assets/tela_11.png)
 
-Deixaremos a VPC Padrão e as subnets com o sufixo `1a` e `1b`.
+Deixaremos a VPC Padrão e as todas as subnets.
 
 ![ECS_12](./assets/tela_12.png)
 
