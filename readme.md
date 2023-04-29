@@ -200,8 +200,7 @@ Na etapa de configuração de ambiente da aplicação, colocaremos:
 - Ambiente: `AWS Fargate`
 - Sistema Operacional/Arquitetura: `Linux/X86_64`
 - CPU: `1 vCPU` , Memória: `2GB`
-- Função da tarefa: `TeamRole`
-- Função de execução da tarefa: `TeamRole`
+- Função da tarefa: `Criar nova Tarefa`
 
 Em seguida vamos Clicar em *Próximo*.
 
