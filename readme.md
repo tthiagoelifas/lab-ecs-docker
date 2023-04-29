@@ -289,6 +289,7 @@ Em Configuração de implantação vamos configurar:
     - Nome do serviço: `service-lab-ecs`.
     - Tipo de serviço: `Réplica`.
     - Tarefas desejadas: `2`.
+    - Grupo de Segurança: `Vamos utilizar o mesmo da TASK o SG_LAB_ECS` - deixe apenas ele
 
 Nas configurações de rede, vamos fazer as mesmas do `Passo 08`.
 
