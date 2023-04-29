@@ -96,6 +96,8 @@ Vamos ter duas formas de fazer o *push*:
 - Utilizando sistema operacional *Linux ou Mac*.
 - Utilizando sistema operacional *Windows*.
 
+> **Importante:** Case esteja usando algum profile do AWS-CLI passe no comando de login antes do | o paramento --profile (seu_profile).
+
 > **Importante:** É necessário ter configurado o AWS-CLI com suas credencias de acesso.
 Segue link da documentação de configuração do AWS-CLI. (https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-quickstart.html)
 
